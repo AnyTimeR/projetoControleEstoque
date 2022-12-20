@@ -2,18 +2,32 @@ package model;
 
 public class Produto {
 	//Atributos do Produto
+	private int codigo;
 	private String nome;
 	private double preco;
 	private int quantidade;
 	
 	//Construtor do Produto
-	public Produto(String nome, double preco, int quantidade) {
+	public Produto(int codigo, String nome, double preco, int quantidade) {
+		this.codigo = codigo;
 		this.nome = nome;
 		this.preco = preco;
 		this.quantidade = quantidade;
 	}
 
+	public Produto(String nome) {
+		this.nome = nome;
+	}
+
 	//Métodos do Produto
+	public int getCodigo() {
+		return codigo;
+	}
+	
+	public void setCodigo(int codigo) {
+		this.codigo = codigo;
+	}
+	
 	public String getNome() {
 		return nome;
 	}
@@ -36,6 +50,11 @@ public class Produto {
 
 	public void setQuantidade(int quantidade) {
 		this.quantidade = quantidade;
+	}
+
+	@Override
+	public String toString() {
+		return "Produto [nome=" + nome + ", preco=" + preco + ", quantidade=" + quantidade + "]";
 	}
 	
 }

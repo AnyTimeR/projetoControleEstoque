@@ -6,7 +6,7 @@ import javax.swing.JFrame;
 
 public class MenuPrincipal {
 
-	private JFrame frame;
+	private JFrame frmControleDeEstoque;
 
 	/**
 	 * Launch the application.
@@ -16,7 +16,7 @@ public class MenuPrincipal {
 			public void run() {
 				try {
 					MenuPrincipal window = new MenuPrincipal();
-					window.frame.setVisible(true);
+					window.frmControleDeEstoque.setVisible(true);
 				} catch (Exception e) {
 					e.printStackTrace();
 				}
@@ -35,9 +35,10 @@ public class MenuPrincipal {
 	 * Initialize the contents of the frame.
 	 */
 	private void initialize() {
-		frame = new JFrame();
-		frame.setSize(1920, 1080);
-		frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-		frame.getContentPane().setLayout(null);
+		frmControleDeEstoque = new JFrame();
+		frmControleDeEstoque.setTitle("Controle de Estoque v1.0");
+		frmControleDeEstoque.setSize(1920, 1080);
+		frmControleDeEstoque.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+		frmControleDeEstoque.getContentPane().setLayout(null);
 	}
 }

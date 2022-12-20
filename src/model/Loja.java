@@ -30,4 +30,10 @@ public class Loja {
 	public int getQuantidadeProdutos() {
 		return produtos.size();
 	}
+
+	@Override
+	public String toString() {
+		return "Loja [nome=" + nome + ", produtos=" + produtos + "]";
+	}
+	
 }
